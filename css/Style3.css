@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat&display=swap');
+
+html, body{
+    height: 100vh;
+    overflow: hidden;
+    background: #BFA7F9;
+    background: var(--primary-gradient);
+    /*background: #fff;*/
+}
+
+/* Variables */
+:root{
+    --primary-gradient: linear-gradient(to bottom, #BFA7F9, #886cd3);
+    --scondary-gradient: linear-gradient(to bottom, #c4975b, #c4975b);
+    --text-color: #F7F9F9;
+    --Montserrat: "Montserrat", cursive;
+    --Lobster: "Lobster", cursive;
+    --primary-shadow: 3px 4px 7px rgba(27, 27, 27, 0.534);
+    --border-color: rgba(0,0,0,0.329);
+}
+
+
+.container{
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    height: 100vh;           /* Take up full viewport height */
+    max-width: 100vw;
+    width: 100vw;
+}
+.container .panel{
+    width: 70%;
+    height: 72%;
+    /*box-shadow: var(--primary-gradient);*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    height: 100%;
+    background: #fff;
+}
+.login {
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Space out items horizontally */
+    border-radius: 0 15px 15px 0;
+}
+.liquid{
+    background: url('../assets/Wave3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Space out items horizontally */
+    border-radius: 15px 0 0 15px;
+
+}
+
+.liquid h4{
+    text-align: left;
+    padding: 0 2rem;
+    color: whitesmoke;
+    font-family: var(--Montserrat);
+}
+
+.owl-carousel{
+    width: 100%;
+    height: 320px;
+    max-height: 330px;
+}
+
+.owl-carousel .owl-item .login_img{
+    float: right;
+    width: 400px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 3rem;
+}
+.owl-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.owl-dots {
+    position: relative;
+    padding: 3rem 1.2rem;
+    display: flex !important;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    /*transform: translateY(-240px);*/
+}
+
+.owl-dots button{
+    border-radius: 5rem;
+    margin: .3rem 0;
+}
+
+.owl-dots button span{
+    background: var(--text-color) !important;
+    margin: 0rem .6rem !important;
+}
+
+.owl-dots .active{
+    border: 1px solid #ffd765 !important;
+}
+
+.owl-dots .active span{
+    background: #ffd765 !important;
+    margin: .3rem .5rem !important;
+}
+
+.follow{
+    padding: 0 1.4rem;
+    padding-top: 1.4rem;
+    font-family: var(--Lobster);
+    color: whitesmoke;
+    position: relative;
+    font-size: .9rem;
+}
+
+.follow::after{
+    content: "";
+    position: absolute;
+    left: 14%;
+    width: 50px;
+    border: 1px solid whitesmoke;
+    border-radius: 4rem;
+    margin-top: .5rem;
+}
+
+.follow i:first-child{
+    margin-left: 4rem;
+}
+
+/* Second Column Login */
+
+.btn{
+    padding: .5rem 1.5rem;
+    border: none;
+    border-radius: 4rem;
+    background: #2b5876;
+    color: whitesmoke;
+    font-size: .7rem;
+    font-family: var(--Montserrat);
+    box-shadow: var(--primary-shadow);
+    cursor: pointer;
+}
+
+.login .btn-signup,
+form .btn-login{
+    background: var(--primary-gradient);
+    float: right;
+    margin: 1rem;
+}
+
+.titles{
+    margin-bottom: 2.2rem;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+}
+
+form h3, form h6{
+    font-family: var(--Montserrat);
+    padding: 0;
+    margin: 0;
+}
+
+form h6{
+    font-family: var(--Lobster);
+    color: #444444d2;
+}
+
+form .input-group{
+    border: 1px solid var(--border-color);
+    margin-top: .9rem;
+    /*margin-right: 2rem;*/
+    border-radius: 3rem;
+}
+
+form .input-group .form-control{
+    padding: .7rem 1rem;
+    background: transparent;
+    border: none;
+    font-family: var(--Montserrat);
+    font-size: .9rem;
+    overflow: hidden;
+}
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+form input:focus, form .form-control:focus{
+    outline: none;
+}
+
+form .input-icon{
+    background: transparent;
+    border: none;
+    color: var(--border-color);
+}
+
+form .btn-login{
+    float: none;
+    padding: .8rem 5rem;
+    margin-top: 1.5rem;
+}
